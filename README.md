@@ -27,3 +27,38 @@
         
  </body>
 </html>
+
+
+#2 Associative key values for arrays 
+
+## Keys can be used to loop/access the values of array.
+
+
+<body>
+   <?php 
+    
+      $books = [
+        [
+        'name'=>"TheTimes",
+        'author'=>"TimesAuthor"
+        ],
+        [
+        'name'=> "OldTimes",
+        'author'=>"OldTimesAuthor"
+        ]
+      
+      ];
+    
+    ?>
+
+    <ul>
+
+      <?php  foreach ($books as $book) :?>
+       <li>
+         <?= $book['name'] ;?>
+       </li>
+
+      <?php endforeach ;?>
+      
+    </ul>
+</body>
