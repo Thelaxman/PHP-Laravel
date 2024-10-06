@@ -124,3 +124,63 @@ function filter($items, $key, $value){
 
 ```
 
+#Built-in php function for arrays
+
+```php
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+
+<body>
+    <?php
+        $books = [
+            [
+                'name' => 'Do Androids Dream of Electric Sheep',
+                'author' => 'Philip K. Dick',
+                'releaseYear' => 1968,
+                'purchaseUrl' => 'http://example.com'
+            ],
+            [
+                'name' => 'Project Hail Mary',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2021,
+                'purchaseUrl' => 'http://example.com'
+            ],
+            [
+                'name' => 'The Martian',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2011,
+                'purchaseUrl' => 'http://example.com'
+            ],
+        ];
+
+
+
+    
+    
+
+    $filteredList = array_filter($books, function($book){
+        return $book['releaseYear']>=2000;
+    } );
+    
+    ?>
+
+<ul>
+    <?php foreach( $filteredList as $book) :?>
+
+    <li>
+        <?= $book['name'] ?>
+    </li>
+
+<?php endforeach ;?>
+</ul>
+
+
+    
+</body>
+</html>
+```
+
