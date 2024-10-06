@@ -1,6 +1,6 @@
+# Creating and calling functions to echo out the desired results.
 
-#Creating and calling functions to echo out the desired results.
-
+```php
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,35 +31,25 @@
             ],
         ];
 
+        function filterByAuthor($books, $author) {
+            $filteredBooks = [];
 
-function filterbyAuthor($books, $author){
+            foreach ($books as $book) {
+                if ($book['author'] === $author) {
+                    $filteredBooks[] = $book;
+                }
+            }
 
-    $filteredBooks = [];
-
-    foreach($books as $book){
-        if($book['author']===$author){
-            $filteredBooks[]= $book;
+            return $filteredBooks;
         }
-    }
-    return $filteredBooks;
-    
-    
-}
-    $filteredList = filterbyAuthor($books,'Andy Weir' )
-    
+
+        $filteredList = filterByAuthor($books, 'Andy Weir');
     ?>
 
-<ul>
-    <?php foreach( $filteredList as $book) :?>
-
-    <li>
-        <?= $book['name'] ?>
-    </li>
-
-<?php endforeach ;?>
-</ul>
-
-
-    
+    <ul>
+        <?php foreach ($filteredList as $book): ?>
+            <li><?= $book['name'] ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
