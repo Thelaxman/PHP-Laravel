@@ -1,7 +1,7 @@
 # PHP-Laravel
 
 #1 foreach loop short-hand
-
+```php
 <html>
   <head></head>
   <body>
