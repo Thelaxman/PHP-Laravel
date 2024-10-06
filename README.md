@@ -33,7 +33,7 @@
 
 ## Keys can be used to loop/access the values of array.
 
-
+```php
 <body>
    <?php 
     
