@@ -1,4 +1,4 @@
-##connection to mysql
+#connection to mysql
 
 ```php
 <?php
