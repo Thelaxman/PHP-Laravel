@@ -1,6 +1,6 @@
 ##connection to mysql
 
-'''php
+```php
 <?php
 
 //PDO: php data objects
@@ -19,4 +19,4 @@ $statement->execute();
 $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
-'''
+```
